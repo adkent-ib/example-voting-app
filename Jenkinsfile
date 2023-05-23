@@ -4,7 +4,7 @@ pipeline {
         stage('Build')
         {
             steps {
-                sh "kubectl create -f k8s-specifications/"
+                sh "cd k8s-specifications/ && kubectl apply -f vote-deployment.yaml"
             }
         }
     }

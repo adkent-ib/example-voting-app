@@ -1,10 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Build')
+        stage('Deploy')
         {
             steps {
-                sh "cd k8s-specifications/ && kubectl apply -f vote-deployment.yaml"
+                sh "minikube stop && minikube delete"
+                sh "minikube start"
+                sh "kubectl create -f k8s-specifications/"
             }
         }
     }

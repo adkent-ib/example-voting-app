@@ -4,7 +4,7 @@ pipeline {
         stage('Build')
         {
             steps {
-                sh "k create -f k8s-specifications/"
+                sh "kubectl create -f k8s-specifications/"
             }
         }
     }

@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    post { 
+        always 
+        { 
+            cleanWs()
+        }
+    }
     stages {
         stage('Build')
         {

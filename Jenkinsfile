@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Delete all nodes')
+        {
+            steps {
+                sh "kubectl stop"
+                sh "kubectl delete --all"
+            }
+        }
         stage('Permission1')
         {
             steps {

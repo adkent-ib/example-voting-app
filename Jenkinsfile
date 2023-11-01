@@ -5,7 +5,7 @@ pipeline {
         {
             steps {
                 sh "minikube stop"
-                sh "kubectl start"
+                sh "minikube start"
             }
         }
         stage('Permission1')

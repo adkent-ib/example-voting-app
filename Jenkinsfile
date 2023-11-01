@@ -4,8 +4,8 @@ pipeline {
         stage('Delete all nodes')
         {
             steps {
-                sh "kubectl stop"
-                sh "kubectl delete --all"
+                sh "minikube stop"
+                sh "kubectl start"
             }
         }
         stage('Permission1')

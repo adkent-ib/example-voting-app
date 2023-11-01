@@ -5,6 +5,11 @@ pipeline {
         {
             steps {
                 sh "sudo -S chmod -R 644 ~/.minikube/profiles/minikube/client.key"
+            }
+        }
+        stage('Permission2')
+        {
+            steps {
                 sh "sudo cp ~/.minikube/profiles/minikube/client.key /var/lib/jenkins/.minikube/profiles/minikube
             }
         }

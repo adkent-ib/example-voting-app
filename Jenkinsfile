@@ -8,12 +8,6 @@ pipeline {
                 sh "sudo cp ~/.minikube/profiles/minikube/client.key /var/lib/jenkins/.minikube/profiles/minikube
             }
         }
-        // stage('Permission2')
-        // {
-        //     steps {
-        //         sh "sudo ln -s ~/.minikube/profiles/minikube/client.key /var/lib/jenkins/.minikube/profiles/minikube/client.key"
-        //     }
-        // }
         stage('Deploy')
         {
             steps {

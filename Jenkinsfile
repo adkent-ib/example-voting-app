@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Delete all nodes')
-        {
-            steps {
-                sh "minikube start"
-            }
-        }
         stage('Permission1')
         {
             steps {

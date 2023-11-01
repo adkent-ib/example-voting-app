@@ -4,7 +4,6 @@ pipeline {
         stage('Delete all nodes')
         {
             steps {
-                sh "minikube stop"
                 sh "minikube start"
             }
         }

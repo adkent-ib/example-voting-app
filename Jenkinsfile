@@ -4,7 +4,7 @@ pipeline {
         stage('Permission1')
         {
             steps {
-                sh "chmod -R 644 /var/lib/jenkins/.minikube/profiles/minikube/client.key"
+                sh "chmod -R 644 /home/adkent/.minikube/profiles/minikube/client.key"
             }
         }
         stage('Deploy')
